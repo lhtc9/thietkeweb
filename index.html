@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="vie">
+<html lang="en">
 <head>
-  <title>Giới Thiệu Bản  Thân</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 530px}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -44,17 +44,24 @@
 <body>
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.html">Giới thiệu</a></li>
-        <li><a href="trainghiem.html">Trãi nghiệm</a></li>
-        <li><a href="kinhnghiem.html">Kinh nghiệm</a></li>
-        <li><a href="chiase.html">Chia sẻ</a></li>
+        <li><a href="trng.html">Trãi nghiệm</a></li>
+        <li><a href="kng.html">Kinh nghiệm</a></li>
+        <li><a href="chise.html">Chia sẻ</a></li>
+        <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Bài tập <span class="caret"></span>
+    </a>
+    
+    <ul class="dropdown-menu">
+        <li><a href="vidu2.html" target="blank">Web thơ</a></li>
+        <li><a href="webnhac.html"target="blank">Web nhạc</a></li>
+   
+    </ul>
+</li>
         <li><a href="lienhe.html">Liên hệ</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
       </ul>
     </div>
   </div>
@@ -63,44 +70,36 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="index1.html">Web nhạc</a></p>
-      <p><a href="#">web thơ</a></p>
-     
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Xin chào, tôi tên là Lư Hoàng Thế Châu học lớp DA25TTD</h1>
-      <p>Tôi là sinh viên đam mê công nghệ thoongtin và luôn tìm kiếm cơ hội để phát triển bản thân trong lĩnh vực Thiết kế Web.</p>
-        <p>Mục tiêu cuả tôi là trở thành kỹ sư Công nghệ Thông tin, tạo ra những sản phẩm chất lượng và mang lại giá trị thực tế</p>
+      <h1 align="center">Giới thiệu bản thân</h1>
+      <h4>Xin chào, tôi là Lư Hoàng Thế Châu</h4>
+      <p>
+        Tôi hiện là sinh viên năm nhất ngành Công nghệ thông tin tại <b>Đại học Trà Vinh</b>. Tôi yêu thích công nghệ, thiết kế website và luôn mong muốn học hỏi thêm những kiến thức mới trong lĩnh vực lập trình.<br>
+        <br>Website này được tạo ra để giới thiệu bản thân, lưu lại hành trình học tập và chia sẻ những sản phẩm mà tôi đã thực hiện trong quá trình học.
+    </p>
       <hr>
-      <h3>Ảnh của tôi</h3>
-
-      <table style="height: 100%; width: 40% "  >
-      <tr>
-            <td><img src="https://i.pinimg.com/736x/e1/0a/82/e10a822f59e5b01d739867e50eeb98dd.jpg" style="width: 60%" ></td>
+      <h3>Thông tin cá nhân:</h3>
+      <table >
+        <tr style="height: 100%; width: 40% " >
+           <td align="center"><img src="https://i.pinimg.com/736x/e1/0a/82/e10a822f59e5b01d739867e50eeb98dd.jpg" style="width: 60%" ></td>
             <td  style="width: 60%">
-               <p>Họ tên: Lư Hoàng Thế Châu</p>
-               <p>Lớp: DA25TTD</p>
-               <p>Trường: Đại học Trà Vinh</p>
-               <p>Ngành: Công Nghệ Thông Tin</p>
+                <p>👤 <strong>Họ và tên:</strong> Lư Hoàng Thế Châu</p><br>
+                <p>🎂 <strong>Năm sinh:</strong> 2007</p><br>
+                <p>📍 <strong>Quê quán:</strong> Trà Vinh</p><br>
+                <p>💻 <strong>Ngành học:</strong> Công nghệ thông tin</p><br>
+                <p>❤️ <strong>Sở thích:</strong> Lập trình, thiết kế web, chỉnh sửa video</p><br>
             </td>
         </tr>
-      </table>
-
-      </table>
+      </table><br>
     </div>
     <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
     </div>
   </div>
 </div>
 
 <footer class="container-fluid text-center">
- <p> Lư Hoàng Thế Châu - DA25TTD </p>
+  <p>Lư Hoàng Thế Châu - DA25TTD</p>
 </footer>
 
 </body>
