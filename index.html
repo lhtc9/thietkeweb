@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Đăng nhập</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body{
+        background:#f5f5f5;
+    }
+
+    .modal-content{
+        border-radius:15px;
+        padding:20px;
+    }
+
+    .modal-title{
+        text-align:center;
+        font-weight:bold;
+    }
+
+    .btn-login{
+        width: 100%;
+        background:#007bff;
+        color:rgb(251, 24, 24);
+        text-decoration: none ;
+    }
+
+    .btn-login:hover{
+        background:#0056b3;
+        color:white;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Popup Login -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="modal-title">Đăng nhập</h3>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+          <!-- Email -->
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input type="email" class="form-control" 
+                   placeholder="Nhập email">
+          </div>
+
+          <br>
+
+          <!-- Password -->
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-lock"></i>
+            </span>
+            <input type="password" class="form-control" 
+                   placeholder="Nhập mật khẩu">
+          </div>
+            <div class="checkbox">
+            <label><input type="checkbox" value=""><b>Duy trì đăng nhập</b></label><br>
+            <a href="#" style="color:rgb(204, 40, 40);" >Quên mật khẩu?</a>
+
+            </div>
+          <!-- Button -->
+          <button type="submit" class="btn btn-login" >
+            <a href="index1.html" style="color:rgb(255, 255, 255);" >Đăng nhập</a>
+          </button>
+          
+        </form>
+            <br>
+          <p align="center"><b >Bạn chưa có tài khoản?<a href="dangky.html"  style="color:rgb(191, 7, 53);"> Đăng ký</a></b></p>        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#loginModal").modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    $("#loginModal").modal("show");
+});
+</script>
+
+</body>
+</html>
