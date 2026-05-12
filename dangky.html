@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Đăng ký</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- Modal Register -->
+<div id="registerModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+          
+            <div class="modal-header text-center">
+                <h2>Đăng ký</h2>
+            </div>
+
+            <div class="modal-body">
+                <form>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Họ và tên" id="hoten">
+                    </div>
+
+                    <br>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </span>
+                        <input type="email" class="form-control" placeholder="Email" id="email">
+                    </div>
+
+                    <br>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" placeholder="Mật khẩu" id="matkhau">
+                    </div>
+
+                    <br>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" placeholder="Xác nhận mật khẩu" id="xacnhan">
+                    </div>
+
+                    <br>
+
+                    <table>
+                        <tr>
+                            <td height="80%"><img src="anh/capcha.png" width="70%"></td>
+                            <td width="80%">
+                                <form>
+                                    <div class="form-group">
+                                    <label for="usr"></label>
+                                    <input type="text" class="form-control" id="capcha" placeholder="Nhập mã ở đây" >
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg" onclick="dangKy()">
+                            Đăng ký
+                        </button>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center">
+                        <p>Hoặc đăng ký bằng</p>
+
+                        <button type="button" class="btn btn-danger">
+                            Google
+                        </button>
+
+                        <button type="button" class="btn btn-primary">
+                            Facebook
+                        </button>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center">
+                        <b>Đã có tài khoản?
+                        <a href="index1.html" style="color:rgb(204, 40, 40);">Đăng nhập</a></b>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#registerModal").modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    $("#registerModal").modal("show");
+});
+function dangKy(){
+    var hoten = document.getElementById("hoten").value;
+    var email = document.getElementById("email").value;
+    var matkhau = document.getElementById("matkhau").value;
+    var xacnhan = document.getElementById("xacnhan").value;
+    var captcha = document.getElementById("capcha").value;
+
+    if(hoten == "" || email == "" || matkhau == "" || xacnhan == ""){
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+
+    if(matkhau != xacnhan){
+        alert("Mật khẩu xác nhận không khớp!");
+        return;
+    }
+
+    alert(
+        "🎉 Chúc mừng bạn đã đăng ký thành công!\n" +
+        "---------------------------------\n" +
+        "Họ tên: " + hoten + "\n" +
+        "Email: " + email + "\n" +
+        "Mật khẩu: " + matkhau + "\n" +
+        "Captcha: " + captcha
+    );
+}
+</script>
+
+</body>
+</html>
