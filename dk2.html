@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Đăng nhập</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+    .modal-dialog{
+    width: 800px;
+}
+    body{
+        background:#f5f5f5;
+    }
+
+    .modal-content{
+        border-radius:0px;
+        padding:30;
+        }
+
+    .modal-title{
+        text-align:center;
+        font-weight:bold;
+        color: #f5f5f5;
+    }
+
+    .btn-login{
+        width: 100%;
+        background:#007bff;
+        color:rgb(251, 24, 24);
+        text-decoration: none ;
+    }
+
+    .btn-login:hover{
+        background:#0056b3;
+        color:white;
+    }
+    .modal-header{
+        background:#28a745;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+    textarea{
+        width: 100%;
+        height: 150%;
+        resize: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Popup Login -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="modal-title">Thông tin đăng ký
+        </h3>
+      </div>
+      <div>
+        <table align="center" width="90%" height="100%"cellpadding="0">
+
+    <tr>
+       <br> <td> <b>Họ tên: </b><br></td>
+        <td><input type="text"  id="usr" placeholder="Nhập họ tên" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;" ><br><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Ngày sinh: </b><br></td>
+        <td><input type="date"  id="date" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;"><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Giới tính: </b><br></td>
+        <td>&nbsp;<input type="radio" name="gt" id="nam"><label for="nam">Nam</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gt" id="nu"><label for="nu">Nữ</label>
+        <br></td>
+    </tr>
+
+    <tr>
+        <td><b>Địa chỉ: </b><br></td>
+        <td><textarea  rows="2" id="comment" placeholder="Nhập địa chỉ" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;"></textarea></td>
+    </tr>
+
+    <tr>
+        <td><b>MSSV:</b><br></td>
+        <td><textarea  rows="1" id="comment" placeholder="Nhập mã số sinh viên" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;"></textarea><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Lớp:</b><br></td>
+        <td><textarea rows="1" id="comment" placeholder="Nhập lớp" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;"></textarea><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Số điện thoại:</b><br></td>
+        <td><textarea rows="1" id="comment" placeholder="Nhập số điện thoại" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;"></textarea><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Nhập email:</b><br></td>
+        <td> <input id="email" type="email" name="email" placeholder="Nhập email" style="width: 100%; border: none; border-bottom: 1px solid #333; outline: none; padding: 5px 0;"><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Ảnh đại diện:</b><br></td>
+        <td><br><input id="avt" type="file"  name="file" ><br></td>
+    </tr>
+
+    <tr>
+        <td><b>Sở trường:</b><br><br></td>
+        <td><label class="checkbox-inline"><input type="checkbox" value="">Thiết kế web</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">Lập trình</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">Ca hát</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">Khác</label>
+    </tr>
+
+    <tr>
+        <td><b>Mô tả sơ lược: </b><br></td>
+        <td><textarea  rows="4"  id="comment" ></textarea><br><br></td>
+    </tr>
+    <td colspan="2" align="center">
+        <button type="reset" class="btn btn-success">Hủy bỏ</button> &nbsp;
+        <button type="submit" class="btn btn-success">Đăng ký</button>
+    </td>
+</table><br>
+      </div>
+
+      
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#loginModal").modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    $("#loginModal").modal("show");
+});
+</script>
+
+</body>
+</html>

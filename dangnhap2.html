@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Đăng nhập</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="anh/tvu.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+    .modal-dialog{
+    width: 800px;
+}
+    body{
+        background:#f5f5f5;
+    }
+
+    .modal-content{
+        border-radius:15px;
+        padding:20px;
+        }
+
+    .modal-title{
+        text-align:center;
+        font-weight:bold;
+    }
+
+    .btn-login{
+        width: 100%;
+        background:#007bff;
+        color:rgb(251, 24, 24);
+        text-decoration: none ;
+    }
+
+    .btn-login:hover{
+        background:#0056b3;
+        color:white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Popup Login -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+       <p align ="center"><img src="anh/tvu.png" width="25%" heght="25%"></p>
+        <h3 class="modal-title">PHẦN MỀM TIN HỌC<BR>  <p align="center"> 
+        ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CHO SINH VIÊN CHÍNH QUY<BR>
+            TẠI ĐẠI HỌC TRÀ VINH
+        </h3>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+          <!-- Email -->
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input type="email" class="form-control" 
+                   placeholder="Nhập email">
+          </div>
+
+          <br>
+<!-- Password -->
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-lock"></i>
+            </span>
+            <input type="password" class="form-control" 
+                   placeholder="Nhập mật khẩu">
+          </div>
+          <br>
+
+          <table width="100%" style="text-align:center;">
+            <tr>
+                <td style="text-align:left;"><div class="checkbox">
+            <label><input type="checkbox" value=""><b>Nhớ mật khẩu</b></label><br>
+            </div></td>
+
+
+                <td><button type="submit" class="btn btn-login" >
+            <a href="#" style="color:rgb(255, 255, 255);" >Đăng nhập</a>
+          </button></td>
+            </tr>
+          </table><br>
+        </form>
+
+            
+          <form>
+          <button type="submit" class="btn btn-login" >
+            <a href="#" style="color:rgb(255, 255, 255);" >Sinh viên (Đăng nhập bằng Email Microsoft)</a>
+          </button>
+          <br><br>
+          <button type="submit" class="btn btn-danger btn-block" >
+            <a href="#" style="color:rgb(255, 255, 255);" >Giảng viên (Đăng nhập bằng Email TVU)</a>
+          </button>
+          </form>
+        
+            <br>
+          <p><b ><a href="#"  style="color:rgb(0, 112, 156);"> Quên mật khẩu?</a></b></p>        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#loginModal").modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    $("#loginModal").modal("show");
+});
+</script>
+
+</body>
+</html>
